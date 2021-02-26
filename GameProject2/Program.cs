@@ -1,4 +1,5 @@
-﻿using GameProject2.Business.Concrete;
+﻿using GameProject2.Business.Abstruct;
+using GameProject2.Business.Concrete;
 using GameProject2.Business.Entities;
 using System;
 
@@ -8,10 +9,10 @@ namespace GameProject2
     {
         static void Main(string[] args)
         {
-            GamerManager gamerManager = new GamerManager();
+            GamerManager gamerManager = new GamerManager(new UserValidationManager());
             Gamer gamer = new Gamer();
-            gamer.FirstName = "Melike";
-            gamer.LastName = "Gökdemir";
+            gamer.FirstName = "MELİKE";
+            gamer.LastName = "GÖKDEMİR";
             gamer.NationalityId = "12345678910";
             gamer.DateOfBirth = "2001";
 
